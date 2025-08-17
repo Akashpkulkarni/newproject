@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+<style>
+body{
+
+font-family: Arial, Helvetica, sans-serif;
+background-color: #f9f9f9;
+margin: 0;
+padding: 0;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+
+#container{
+
+  border: 1px solid gray;
+  background-color: white;
+  width:850px;
+  border-radius: 3px;
+  box-shadow: 0 4px 6px rgba(0, 2, 3, 0.5);
+  margin-left: 25px;
+  margin-top: 10px;
+  height: 600px;
+
+
+}
+
+h2{
+
+ font-size:20px;
+ text-align: center;
+ margin: 10px;
+ font-weight: bold;
+ font-family:Verdana, Geneva, Tahoma, sans-serif;
+ margin-top: 15px;
+
+}
+
+#UserName{
+
+ width: 95%;
+ margin-left: 10px;
+ margin-top: 15px;
+margin-bottom: 50px;
+height: 20px;
+font-weight: bold;
+}
+
+#user{
+
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+
+#email{
+
+ width: 95%;
+ margin-left: 10px;
+ margin-top: 15px;
+ height: 20px;
+ font-weight: bold;
+}
+
+#Email{
+
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+
+#pwd{
+
+margin-left: 10px;
+
+
+}
+
+
+#password {
+
+ width: 95%;
+ margin-left: 10px;
+ margin-top: 15px;
+ margin-bottom: 15px;
+ height:20px ;
+ font-weight: bold;
+}
+
+
+
+
+#btn{
+
+ width: 97%;
+ text-align: center;
+ background-color: green;
+ color: white;
+ cursor: pointer;
+ margin-top: 100px;
+ margin-left: 5px;
+ border-radius:7px;
+ border: none;
+ font-size: 35px;
+}
+#btn:hover{
+
+   background-color: lightgreen;
+   color: black;
+
+}
+
+label{
+
+
+ margin-left: 25px;
+ margin-top: 25px;
+
+}
+
+</style>
+
+
+</head>
+<body>
+ <div id="container">   
+ <form id="regestration">   
+ <h2>FORM VALIDATION</h2>
+ <div id="label1">
+<label for="Username" id="user">UserName:</label>
+<br>
+<input type="text" id="UserName" name="UserName" placeholder="Enter Your Username" required>
+<br>
+<label for="email" id="Email">Email:</label>
+<br>
+<input type="text"  id="email" name="email"  placeholder="Enter your email" required>
+<br><br><br>
+<label for="password" id="pwd">Password:</label>
+<br> 
+<input type="password" id="password" name="password" placeholder="Enter your password" required>
+<br>
+<button id="btn">Submit</button>
+ </form>
+ <div id="error_message"></div>
+
+ </div>
+ </div>
+ 
+ <script>
+ 
+ const form = document.getElementById('regestration');
+ const errorMessage=document.getElementById('error_message');
+
+  form.addEventListener('click',(e)=>{
+
+    e.preventDefault()
+
+     const Username = document.getElementById('UserName').value.trim()
+     const email = document.getElementById('email').value.trim()
+     const password = document.getElementById('password').value.trim()
+
+     errorMessage.innerHTML ="";
+
+
+       document.getElementById('btn').innerHTML= alert('aplication  submitted successful!')
+
+     
+      
+      if(Username===''){
+
+        errorMessage.innerHTML="Username is required!";
+        return
+      }
+
+       
+
+
+
+
+
+
+
+ </script>
+</body>
+</html>
